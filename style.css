@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-color: #0f171e;
+    --assistant-color: #1a242e;
+}
+
+body{
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: var(--main-color);
+}
+
+header{
+    background-color: var(--assistant-color);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1{
+    color: #fff;
+    letter-spacing: 5px;
+}
+
+.search{
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 1rem;
+    font-family: inherit;
+    font-size: 1.1rem;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    width: 100%;
+    outline: none;
+    transition: all .5s;
+  
+}
+
+.search:focus{
+    transform: scale(1.1);
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 30px;
+}
+
+.movie{
+    width: 230px;
+    margin: 1rem;
+    background-color: var(--assistant-color);
+    box-shadow: 0 5px 6px rgbs(0,0,0,0.25);
+    position: relative;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.movie img{
+    width: 100%;
+}
+.movie-info{
+    color: #79b8f3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    letter-spacing: 0.5px
+}
+
+.movie-info span{
+    background-color: var(--main-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 1rem;
+    font-size: 90%;
+    font-weight: bold;
+}
+
+.movie-info span.green{
+    color: rgb(32, 178, 83);
+}
+
+.movie-info span.yellow{
+    color: rgb(203, 195, 87);
+}
+
+.movie-info span.red{
+    color: rgb(203, 52, 52);
+    
+}
+
+.overview{
+    background-color: #566b84;
+    color: #111;
+    padding: 2rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-height: 100%;
+    transform: translateY(101%);
+    overflow-y: auto;
+    transition: all .5s;
+
+}
+
+
+.movie:hover .overview{
+    transform: translateY(0);
+}
+
+.overview h3{
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #79b8f3;
+    width: 50%;
+}
+
+footer{
+    background-color: var(--assistant-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+
+}
+
+footer h3{
+    letter-spacing: 5px;
+    color: #fff;
+    margin-bottom: 0.8rem;
+}
+
+footer li{
+    list-style-type: none;
+    display: inline;
+    margin-right: 1rem;
+}
+
+footer ul li a {
+    color: #2066a0;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+footer small{
+    margin-top: 1rem;
+    margin-bottom: 0.8rem;
+    color: #8197a4;
+}
